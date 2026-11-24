@@ -1,5 +1,13 @@
 # Password Classification Using Machine Learning
 
+## ▶ Try it / verify it (no installation needed)
+| What | Link |
+|---|---|
+| **Run the website** (opens in Google Colab, then click *Runtime → Run all* and open the link printed at the bottom) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kamranyounas11/password-classification-ml/blob/main/Run_Website_in_Colab.ipynb) |
+| **Training notebook** (dataset, cleaning, features, training, 100% test accuracy, saving the .pkl; results already shown) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kamranyounas11/password-classification-ml/blob/main/Password_Classification.ipynb) |
+
+You only need to be signed in to a Google account. Colab may warn that the notebook is from GitHub: click **Run anyway**.
+
 Classifies a password as **Weak**, **Medium** or **Strong** with a Random Forest model, and serves it through a responsive HTML/CSS website with a Python (Flask) backend.
 
 ## Project files
@@ -11,6 +19,7 @@ Classifies a password as **Weak**, **Medium** or **Strong** with a Random Forest
 | `templates/index.html` | Frontend page |
 | `static/style.css` | Styling (responsive) |
 | `static/script.js` | Live feature display and call to the backend |
+| `Run_Website_in_Colab.ipynb` | Runs the website in Google Colab with one click |
 | `requirements.txt` | Python dependencies |
 
 ## Dataset
