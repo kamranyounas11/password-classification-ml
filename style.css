@@ -1,0 +1,32 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#1e3a8a 0%,#4f46e5 50%,#7c3aed 100%);padding:20px;color:#1f2937}
+.card{background:#fff;width:100%;max-width:520px;border-radius:20px;padding:36px 32px;box-shadow:0 25px 60px rgba(0,0,0,.25)}
+header{text-align:center;margin-bottom:26px}
+.logo{font-size:42px}
+h1{font-size:1.7rem;margin-top:6px;color:#111827}
+.sub{color:#6b7280;font-size:.92rem;margin-top:6px}
+label{font-weight:600;font-size:.9rem;display:block;margin-bottom:8px}
+.input-wrap{display:flex;border:2px solid #e5e7eb;border-radius:12px;overflow:hidden;transition:border-color .2s}
+.input-wrap:focus-within{border-color:#4f46e5}
+input{flex:1;border:none;padding:14px 16px;font-size:1rem;outline:none;min-width:0}
+#toggle{border:none;background:#f3f4f6;padding:0 16px;cursor:pointer;font-weight:600;color:#4b5563}
+#checkBtn{width:100%;margin-top:14px;padding:14px;border:none;border-radius:12px;font-size:1rem;font-weight:600;color:#fff;
+  background:linear-gradient(90deg,#4f46e5,#7c3aed);cursor:pointer;transition:transform .1s,opacity .2s}
+#checkBtn:hover{opacity:.92}#checkBtn:active{transform:scale(.98)}#checkBtn:disabled{opacity:.6;cursor:wait}
+.features{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:24px 0 8px}
+.feat{background:#f9fafb;border:1px solid #eef0f3;border-radius:10px;text-align:center;padding:10px 4px}
+.feat span{display:block;font-size:1.3rem;font-weight:700;color:#4f46e5}
+.feat small{font-size:.7rem;color:#6b7280}
+.result{text-align:center;margin-top:18px}
+.hidden{display:none}
+.meter{height:10px;background:#e5e7eb;border-radius:99px;overflow:hidden}
+#bar{height:100%;width:0;transition:width .5s,background .5s}
+#label{margin-top:14px;font-size:1.8rem}
+#conf{color:#6b7280;font-size:.9rem;margin-top:4px}
+.weak #bar{width:33%;background:#ef4444}.weak #label{color:#ef4444}
+.medium #bar{width:66%;background:#f59e0b}.medium #label{color:#d97706}
+.strong #bar{width:100%;background:#10b981}.strong #label{color:#059669}
+.error{color:#dc2626;text-align:center;margin-top:10px;font-size:.9rem;min-height:1em}
+footer{margin-top:22px;font-size:.78rem;color:#9ca3af;text-align:center}
+@media (max-width:480px){.card{padding:26px 18px}h1{font-size:1.35rem}.features{grid-template-columns:repeat(3,1fr)}}

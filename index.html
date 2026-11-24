@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Checker | ML</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <div class="logo">🔐</div>
+      <h1>Password Strength Checker</h1>
+      <p class="sub">Powered by a Machine Learning model trained on 600k+ real passwords</p>
+    </header>
+
+    <form id="pwForm" autocomplete="off">
+      <label for="password">Enter a password</label>
+      <div class="input-wrap">
+        <input type="password" id="password" name="password" placeholder="Type your password…"
+               autocomplete="new-password" spellcheck="false" maxlength="256" required>
+        <button type="button" id="toggle" aria-label="Show password">Show</button>
+      </div>
+      <button type="submit" id="checkBtn">Check Strength</button>
+    </form>
+
+    <section class="features" aria-label="Extracted features">
+      <div class="feat"><span id="f-length">0</span><small>Length</small></div>
+      <div class="feat"><span id="f-uppercase">0</span><small>Uppercase</small></div>
+      <div class="feat"><span id="f-lowercase">0</span><small>Lowercase</small></div>
+      <div class="feat"><span id="f-numeric">0</span><small>Numeric</small></div>
+      <div class="feat"><span id="f-special">0</span><small>Special</small></div>
+    </section>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="meter"><div id="bar"></div></div>
+      <h2 id="label">—</h2>
+      <p id="conf"></p>
+    </section>
+    <p id="error" class="error"></p>
+
+    <footer>Your password is never stored or logged. It is only used to calculate features for the prediction.</footer>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
